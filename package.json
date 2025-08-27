@@ -1,0 +1,20 @@
+{
+  "name": "chat",
+  "version": "1.0.0",
+  "description": "Projeto Web Socket",
+  "homepage": "https://github.com/paulosouza4u/chat#readme",
+  "bugs": {
+    "url": "https://github.com/paulosouza4u/chat/issues"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/paulosouza4u/chat.git"
+  },
+  "license": "ISC",
+  "author": "Paulo Souza",
+  "type": "commonjs",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  }
+}
