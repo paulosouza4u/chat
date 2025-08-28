@@ -1,3 +1,13 @@
+<!--
+//Client
+
+import { io } from "socket.io-client";
+
+const socket = io("https://example.com", {
+  path: "/my-custom-path/"
+});
+-->
+
 <!DOCTYPE html>
 <html>
 <head>
@@ -21,5 +31,21 @@
 <form id="form" action="">
     <input id="input" autocomplete="off" /><button>Send</button>
 </form>
+
+<script src="https://cdn.socket.io/4.8.1/socket.io.min.js"></script>
+<script>
+    const socket = io();
+
+    const form = document.getElementById('form');
+    const input = document.getElementById('input');
+
+    form.addEventListener('submit', (e) => {
+        e.preventDefault();
+        if (input.value) {
+            socket.emit('chat message', input.value);
+            input.value = '';
+        }
+    });
+</script>
 </body>
 </html>
